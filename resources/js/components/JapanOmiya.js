@@ -48,6 +48,8 @@ class JapanOmiya extends Component {
         })
     }
 
+
+
     render() {
         return (<div className="container-fluid">
             <div className="row">
@@ -56,28 +58,14 @@ class JapanOmiya extends Component {
                         <div
                             className="card-header"
                             style={{ backgroundColor: "rgb(172, 27, 46)", color: "#FFFFFF", fontSize: 18 }}>
-                            omiya Title
-                                <button
-                                onClick={() => this.AddTasks()}
-                                className="btn"
-                                style={{
-                                    position: "absolute",
-                                    top: 0,
-                                    right: 5,
-                                    color: "white",
-                                    fontSize: 24
-                                }}>+</button>
+                            都道府県
                         </div>
                         <ul className="list-group">
-                            <li className="list-group-item" onClick={() => this.click("test111")}>
-                                test1
-                            </li>
-                            <li className="list-group-item" onClick={() => this.click("test222")}>
-                                test2
-                            </li>
-                            <li className="list-group-item" onClick={() => this.click("test333")}>
-                                test3
-                            </li>
+                            {prefectures.map((prefecture) =>
+                                < li className="list-group-item" onClick={() => this.click("test111")}>
+                                    {prefecture}
+                                </li>)
+                            }
                         </ul>
                     </div>
                 </div>
@@ -149,6 +137,10 @@ class OmiyaContent extends Component {
     }
 }
 
+const prefectures = ["北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県",
+    "埼玉県", "千葉県", "東京都", "神奈川県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県", "岐阜県", "静岡県",
+    "愛知県", "三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県", "鳥取県", "島根県", "岡山県", "広島県",
+    "山口県", "徳島県", "香川県", "愛媛県", "高知県", "福岡県", "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"];
 
 
 // セレクターの定義: Appコンポーネントが必要とするデータを グローバルなstate 全体の中から取捨選択して取得する。今回は state 全体をそのままreturnしている
