@@ -83877,9 +83877,7 @@ function (_Component) {
       omiyaTitle: 'omiya App',
       omiyaText: 'This is omiya Text',
       omiyasData: '',
-      mode: 'show',
-      reduxText: 'ADDTASK',
-      todo: ""
+      mode: 'show'
     };
     return _this;
   }
