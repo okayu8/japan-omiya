@@ -17,8 +17,6 @@ class JapanOmiya extends Component {
             omiyaText: 'This is omiya Text',
             omiyasData: '',
             mode: 'show',
-            reduxText: 'ADDTASK',
-            todo: ""
         }
     }
 
@@ -47,8 +45,6 @@ class JapanOmiya extends Component {
             omiyaId: 0
         })
     }
-
-
 
     render() {
         return (<div className="container-fluid">
